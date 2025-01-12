@@ -2,6 +2,7 @@ import folium
 from streamlit_folium import st_folium
 import streamlit as st
 from global_constants import COORDINATES_FOR_THE_CENTER_KENYA, ZOOM_START
+from modules.penta_1_vaccine_coverage.constants import HEATMAP_TITLE
 
 def plot_heat_map(compound_data):
     base_map = folium.Map(
@@ -12,6 +13,8 @@ def plot_heat_map(compound_data):
         max_zoom=7,
         tiles="CartoDB positron"
     )
+
+    st.write(HEATMAP_TITLE)
 
     folium.Choropleth(
         geo_data=compound_data,

@@ -14,6 +14,7 @@ def main():
     # LOAD AND CLEAN DATA
     df, sub_counties_geodata = load_data()
     clean_data(df)
+    #print(df.head())
 
     # FILTER
     year_filter = create_year_filter(df)
